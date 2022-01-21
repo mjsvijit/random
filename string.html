@@ -1,0 +1,9 @@
+<script>
+    const arr=["sasta","vijit","yaar","ji"];
+ 
+     var odd=arr.filter(i=>i.length%2==1);
+     var len=odd.map(a=>a.length);
+     var reducer=(prev,curr)=>curr+prev;
+     var sum=len.reduce(reducer);
+     console.log(sum);
+</script>
