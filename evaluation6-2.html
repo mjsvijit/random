@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evauation unit 5</title>
+  
+    <style>
+        form{
+            display:grid;
+            grid-template-columns: 1f;
+            row-gap: 10px;
+            margin-left:15%;
+            margin-top: 5%;
+        }
+        #text2{
+            margin-top:5px;
+        }
+
+     
+
+        table{
+            margin:auto;
+        }
+
+      #div1{
+          width:300px;
+          height:500px;
+          background-color: yellow;
+          margin:auto;
+      }
+        #d{
+             text-align: center;
+            height:20px;
+            width:100px;
+            border:2px solid yellow;
+
+        }
+
+    </style>
+
+    
+
+</head>
+<body>
+    <div id="div1">
+    <form id="form">
+        <div style="margin-top: 10%;">
+        <input type="number" id="text1" placeholder="Enter Book Name">
+        <input type="number" id="text2" placeholder="Enter Author Name">
+       
+        </div>
+      
+        <div style="margin-left: 30%;margin-top: 3%;">
+            <input type="submit" placeholder="Area of Rectangle">
+          
+        </div>
+    </form>
+   <h3>Area of Rectangel</h3>
+    <P id="p"></P>
+    <h3>Perimeter of square</h3>
+    <p id="p1"></p>
+   
+            </div>
+</body>
+</html>
+<script>
+    document.querySelector("form").addEventListener("submit",list)
+  
+    function list(event){
+        event.preventDefault();
+        const t1=document.querySelector("#text1").value;
+        const t2=document.querySelector("#text2").value;
+        let area=t1*t2;
+        let per=4*t1
+        document.getElementById("p").innerText=area;
+        document.getElementById("p1").innerText=per;
+        
+        
+     
+         
+           
+            
+        }
+
+
+       
+   
+</script>
