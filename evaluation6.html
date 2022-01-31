@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evauation unit 5</title>
+  
+    <style>
+        form{
+            display:grid;
+            grid-template-columns: 1f;
+            row-gap: 10px;
+            margin-left:15%;
+            margin-top: 5%;
+        }
+        #text2{
+            margin-top:5px;
+        }
+
+        #text3{
+            margin-top:5px;
+        }
+
+        table{
+            margin:auto;
+        }
+
+      #div1{
+          width:300px;
+          height:500px;
+          background-color: yellow;
+          margin:auto;
+      }
+        #d{
+             text-align: center;
+            height:20px;
+            width:100px;
+            border:2px solid yellow;
+
+        }
+
+    </style>
+
+    
+
+</head>
+<body>
+    <div id="div1">
+    <form id="form">
+        <div style="margin-top: 10%;">
+        <input type="text" id="text1" placeholder="Enter Book Name">
+        <input type="text" id="text2" placeholder="Enter Author Name">
+        <input type="text" id="text3" placeholder="Enter comments">
+        </div>
+        <div style="margin-left: 30%;margin-top: 3%;">
+        <input type="submit" placeholder="add">
+        </div>
+    </form>
+    <button id="button">Print All Data</button>
+    <P id="p"></P>
+   
+            </div>
+</body>
+</html>
+<script>
+    document.querySelector("form").addEventListener("submit",list)
+    document.querySelector("#button").addEventListener("click",print)
+    
+    function list(event){
+        event.preventDefault();
+        const book=document.querySelector("#text1").value;
+        const author=document.querySelector("#text2").value;
+        const comments=document.querySelector("#text3").value;
+        
+        
+     
+         
+            let data={
+            book:book,
+            author:author,
+            comments:comments
+           
+           
+            
+        }
+
+
+        data=JSON.stringify(data);
+       
+        localStorage.setItem('user_data',data);
+        
+
+        let mydata=localStorage.getItem('user_data');
+         console.log(mydata)
+          
+
+        
+      
+          
+    }
+    function print(){
+
+        let mydata=localStorage.getItem('user_data');
+  
+           
+           document.querySelector("#p").textContent=mydata;
+       
+       
+    }
+
+   
+</script>
