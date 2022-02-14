@@ -1,0 +1,9 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  margin: 40px;
+}
+.todos {
+  size: 100px;
+  color: red;
+}
